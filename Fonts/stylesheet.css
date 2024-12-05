@@ -1,0 +1,17 @@
+@font-face {
+    font-family: TTLakes;
+    src: url(fonts/TTLakes/TTLakes-Regular.ttf);
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: TTLakes;
+    src: url(fonts/TTLakes/TTLakes-Bold.ttf);
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: TTLakes;
+    src: url(fonts/TTLakes/TTLakes-DemiBold.ttf);
+    font-weight: 600;
+  }

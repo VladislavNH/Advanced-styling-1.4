@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: TTLakes;
+}
+
+@font-face {
+  font-family: TTLakes;
+  src: url('./Fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: TTLakes;
+  src: url('./Fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: TTLakes;
+  src: url('./Fonts/TTLakes-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+li {
+  list-style-type: none;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100%;
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  transition: width 0.3s ease-in-out;
+}
+
+.aside-header {
+  display: flex;
+  align-items: center;
+  padding: 19px 24px;
+}
+
+.aside-header__link {
+  margin-right: auto;
+  margin-left: 16px;
+}
+
+.nav-aside-navigation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  padding: 24px;
+}
+
+.aside-list {
+  font-weight: 600;
+}
+
+.aside-list__item {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.aside-list__link {
+  color: #1B1C21;
+  transition: color 0.3s ease-in-out;
+}
+
+.aside-list__link:hover {
+  color: #7e7e82;
+  animation-name: animation-link-list;
+  animation-duration: 0.5s;
+}
+
+@keyframes animation-link-list {
+  from {
+    color: #1B1C21;
+  }
+  to {
+    color: #7e7e82;
+  }
+}
+
+.aside-list__link:focus::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 32px;
+  background-color: #41F6D7;
+  top: 0;
+  left: -24px;
+  display: block;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.aside-list__link:focus {
+  color: #7e7e82;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.buttons:hover {
+  box-shadow: 0px 0px 30px 0px rgba(163, 69, 97, 0.8);
+}
+
+.aside-footer {
+  padding-left: 24px;
+}
+
+.group-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 152px;
+}
+
+.contacts {
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 16px;
+  height: 68px;
+}
+
+.number-phone {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.switch-lang {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  padding-top: 40px;
+  font-weight: 600;
+  width: 88px;
+}
+
+.switch-lang__item {
+  color: #1B1C21;
+  transition: color 0.3s ease-in-out;
+}
+
+.switch-lang__item:hover {
+  color: #7e7e82;
+  animation-name: switch-lang__item-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes switch-lang__item-animation {
+  from {
+    color: #1B1C21;
+  }
+  to {
+    color: #7e7e82;
+  }
+}
+
+.switch-lang__item:focus {
+  color: #7e7e82;
+}
+
+@media (max-width: 768px) {
+  .aside {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .aside-header {
+    padding: 16px;
+    justify-content: space-between;
+  }
+
+  .aside-header__link {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .nav-aside-navigation {
+    padding: 16px;
+  }
+
+  .aside-list__item {
+    margin-bottom: 16px;
+  }
+
+  .buttons {
+    height: 32px;
+    width: 32px;
+  }
+
+  .contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px;
+    height: auto;
+  }
+
+  .number-phone {
+    font-size: 18px;
+  }
+
+  .switch-lang {
+    width: auto;
+    padding-bottom: 16px;
+  }
+
+  .switch-lang__item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aside {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .aside-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .nav-aside-navigation {
+    padding: 8px;
+  }
+
+  .aside-list__item {
+    margin-bottom: 8px;
+  }
+
+  .number-phone {
+    font-size: 16px;
+  }
+
+  .switch-lang {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+   
